@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const masina = {
+            marca: 'Audi',
+            model: 'A3',
+            culoare: 'Verde',
+            nrUsi: 4,
+            electric: false,
+            startfunction(){
+                console.log('Masina a pornit!');
+            },
+            stopfunction() {
+                console.log('Masina s-a oprit!')
+
+            },
+            afiseazaInfo: function(){ 
+                console.log(`Masina este ${masina.marca} model ${masina.model}`);
+                console.log('Masina este '+this.marca+' model '+this.model);
+
+            }
+        } 
+         //console.log(masina.marca);
+         //masina.afiseazaInfo();
+
+         const masina2 = masina;       //nu creaza un alt obiect face referinta la aceaiasi zona de memorie.
+
+         masina.marca='BMW';
+
+         console.log(masina);
+         console.log(masina2);
+
+    </script>
+</body>
+</html>
